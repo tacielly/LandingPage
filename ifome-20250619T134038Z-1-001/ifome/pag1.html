@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .parte_titulo img {
+      width: 500px;
+    }
+
+    
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+
+    .slogan h2 {
+      width: 575px;
+      font-size: 65px;
+    }
+    .slogan h3{
+      font-size: 45px;
+
+      
+    }
+
+    
+    .formulario img {
+      display: flex;
+      margin-left: 0%;
+      width: 20%;
+    }
+
+    
+    .formulario form {
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+      text-align: center;  
+      width: 100%;
+    }
+
+    .formulario input,
+    .formulario select {
+      width: 80%;
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+   
+
+    .formulario .radios-container label {
+      display: inline-block;
+      margin-right: 15px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .formulario input[type="submit"] {
+      background-color: #f43e1c;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 20px;
+      padding: 10px 0;
+      width: 50%;
+      font-size: 1.1rem;
+    }
+
+    .tudo-img {
+      display: flex;
+      gap: 25%;
+      margin-top: 5%;
+      margin-left: 5%;
+    }
+
+    .tudo-img h3 {
+      font-family: sans-serif;
+      font-size: 35px;
+      color: #555555;
+      margin-top: -4%;
+    }
+
+    .imge h2 {
+      font-size: 20px;
+      width: 500px;
+    }
+
+    .imge {
+      display: flex;
+      margin-top: 8%;
+      gap: 5%;
+      margin-left: 40px;
+    }
+
+    .produtos-container {
+      margin: 60px auto;
+      max-width: 1000px;
+      padding: 0 40px;
+    }
+
+    .produtos-container h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #222;
+    }
+
+    .produtos-scroll {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 20px;
+    }
+
+    .produto {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 250px;
+      padding: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .produto img {
+      width: 250px;
+      height: 190px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .produto:hover img {
+      transform: scale(1.1);
+    }
+
+    .produto h3 {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      .produto {
+        width: 180px;
+      }
+
+      .slogan {
+        width: 90%;
+        margin: 20px auto;
+      }
+
+      .slogan h2 {
+        font-size: 50px;
+        width: 100%;
+      }
+
+      .tudo-img {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+
+  .imge {
+    flex-direction: row;
+    align-items: center;
+    
+    }
+  .imge h3{
+    width: 30%;
+       
+    }
+
+  .imge h2 {
+    width: 30%;
+    font-size: 18px;
+      }
+    
+    .menu {
+      margin-top: 10px;
+      margin-left: 31%;
+      display: flex;
+      gap: 20%;
+    }
+
+    .menu button {
+      background-color: rgb(255, 255, 255);
+      border: none;
+      font-size: 20px;
+      
+    }
+     .menu button :hover {
+      background-color: rgb(255, 255, 255);
+      border: none;
+      font-size: 20px;
+      
+    }
+
+    hr {
+      color: #222;
+      border-top: 2px solid rgb(7, 7, 7);
+    }
+  </style>
+</head>
+<body>
+  <div class="parte_titulo">
+    <img src="img/ChatGPT Image 14 de jun. de 2025, 10_45_49.png" alt="titulo" />
+  </div>
+  <div class="menu">
+  <button onclick="window.location.href='pag1.html'" style="font-size: 33px; text-decoration: underline;">Início</button>
+    <button >Itens</button>
+    <button onclick="window.open('https://docs.google.com/document/d/1FEewf0bfOr72fqPpGsfvA7x82VlOZsEf/edit')">Sobre Nós</button>
+  </div>
+  <hr />
+  <div class="tudo-img">
+    <div class="slogan">
+      <h2>A Fome que te move é a mesma que te Mata</h2>
+      <h3>"Matar a fome de quem tem sede de estudar"</h3>
+    </div>
+    <div class="formulario">
+      <form onsubmit="return validar()">
+        <img src="img/iconepes-removebg-preview.png" alt="" />
+        Email:<br />
+        <input type="email" id="email" placeholder="Exp: abcd@gmail.com" /><br />
+        Telefone:<br />
+        <input type="tel" id="telefone" placeholder="Exp: 9 87654321" /><br />
+        Horário de estudo:<br />
+        <div class="select-container">
+          <select id="horario">
+            <option value="">Selecione</option>
+            <option>Manhã</option>
+            <option>Tarde</option>
+            <option>Noite</option>
+          </select>
+        </div>
+        Dificuldade em se alimentar no campus?<br />
+        <div class="radios-container">
+          <label><input type="radio" name="alimentacao" value="Sim" /> Sim</label>
+          <label><input type="radio" name="alimentacao" value="Não" /> Não</label>
+        </div>
+        <input type="submit" value="Enviar" />
+      </form>
+      <p id="mensagem"></p>
+    </div>
+  </div>
+
+  <div class="imge">
+    <img src="img/img.jfif" alt="campus" />
+    <h2>
+      Nosso projeto vai trabalhar um problema real que os alunos do IFPE- Campus Jaboatão enfrentam frequentemente, que é a falta ou dificuldade de se alimentar, que se potencializou com a quebra do contrato com a empresa que fornecia os alimentos. Assim decidimos criar um projeto para resolver esse problema que afeta a maior parte dos alunos. Buscamos criar um site cuja finalidade é trazer opções complementares de comida para toda a comunidade discente.
+    </h2>
+
+    <h3>Funcionalidades: O meno com os tipos de comida que iremos disponibilizar. Agendamento e pagamento via pix pelo proprio site. histórico com os pedidos entregues, agendados e cancelados. Tudo isso com finalidade de melhorar a qualidade alimenttar dos alunos.
+
+    </h3>
+  </div>
+
+  <div class="produtos-container">
+    <h2>Itens à Venda</h2>
+    <div class="produtos-scroll">
+      <div class="produto">
+        <img src="img/coxinha.jpeg" alt="coxona" />
+        <h3>Coxinha</h3>
+      </div>
+      <div class="produto">
+        <img src="img/enrola.jpeg" alt="enroladão" />
+        <h3>Enroladinho</h3>
+      </div>
+      <div class="produto">
+        <img src="img/pastel.jpeg" alt="pastelão" />
+        <h3>Pastel</h3>
+      </div>
+      <div class="produto">
+        <img src="img/brig.jpeg" alt="negão" />
+        <h3>Brigadeiro</h3>
+      </div>
+      <div class="produto">
+        <img src="img/brownie.jpeg" alt="brownão" />
+        <h3>Brownie</h3>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <p>&copy; 2025 IFPE - Projeto IFoome, Alimentação Estudantil. Todos os direitos reservados.</p>
+    <p>Contatos: Email- atgs@discente.ifpe.edu.br</p>
+    <p>Telefone: (81) 98360-6222</p>
+  </footer>
+  <script>
+    function validar() {
+      const email = document.getElementById("email").value;
+      const tel = document.getElementById("telefone").value;
+      const hora = document.getElementById("horario").value;
+      const alim = document.querySelector('input[name="alimentacao"]:checked');
+      if (!email || !tel || !hora || !alim) {
+        document.getElementById("mensagem").textContent = "Preencha todos os campos.";
+        document.getElementById("mensagem").style.color = "red";
+        return false;
+      }
+      document.getElementById("mensagem").textContent = "Enviado com sucesso!";
+      document.getElementById("mensagem").style.color = "green";
+      return false; 
+    };
+
+   
+  </script>
+</body>
+</html>
+    

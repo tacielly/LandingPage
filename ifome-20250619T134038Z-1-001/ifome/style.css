@@ -1,0 +1,62 @@
+
+    .parte_titulo {
+      width: 100%;
+      text-align: center;
+      background-color: #f43e1c;
+    }
+
+.formulario {
+      display: flex;
+      background-color: #ffa845e7;
+      width: 500px;
+      height: 600px;
+      padding: 20px;
+      border-radius: 10px;
+      flex-direction: column;
+    }
+
+    
+    .slogan {
+      width: 500px;
+      margin-top: 2%;
+      margin-left: 40px;
+    }
+     .formulario .select-container,
+    .formulario .radios-container {
+      width: 80%;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    
+    .produtos-scroll {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 20px;
+    }
+
+    
+    .produtos-scroll {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 20px;
+    }
+
+      @media (max-width: 768px) {
+      .produto {
+        width: 180px;
+      }
+
+    }
+    .footer {
+  background-color: #860000;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
